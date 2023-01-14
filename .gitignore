@@ -1,0 +1,7 @@
+.parcel-cache
+
+#Ignoring Dist Folder
+dist/
+
+# Ignoring Node Modules
+node_modules/
