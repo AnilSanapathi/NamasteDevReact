@@ -1,0 +1,79 @@
+.header {
+    height: 80px;
+    justify-content: space-between;
+    padding-inline: 120px;
+    font-size: 20px;
+    display: flex;
+    position: relative;
+    box-shadow: 0 5px 5px #c5c1c1;
+}
+
+.image {
+    height: 70px;
+}
+
+
+.nav-items>ul {
+    gap: 5rem;
+    list-style-type: none;
+    display: flex;
+}
+
+.restaurant-list {
+    grid-template-columns: 25% 25% 25% 25%;
+    display: grid;
+}
+
+.restraurant-card {
+    width: 300px;
+    height: 350px;
+    flex-direction: column;
+    padding: 22px;
+    display: flex;
+    position: relative;
+}
+
+.card-heading {
+    height: 25%;
+}
+
+.restraurant-card>.details {
+    padding-block: 30px;
+}
+
+.text-muted {
+    color: #7c7878;
+}
+
+.restraurant-card>.sub-details {
+    padding-block: 30px;
+}
+
+.sub-details>span {
+    padding-inline: 8px;
+}
+
+.rating {
+    color: #fff;
+    background-color: #48c479;
+}
+
+.search-bar {
+    text-align: center;
+    margin-block: 50px;
+}
+
+.search-input {
+    width: 30%;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.btn-submit {
+    margin: 20px;
+    height: 30px;
+    width: 80px;
+    text-decoration: #7c7878;
+    font-size: 15px;
+}
