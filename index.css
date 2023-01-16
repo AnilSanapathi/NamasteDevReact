@@ -77,3 +77,33 @@
     text-decoration: #7c7878;
     font-size: 15px;
 }
+
+.shimmer {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 150px;
+    display: flex;
+}
+
+.shimmer .sub {
+    width: 250px;
+    height: 260px;
+    border: 1px solid #d3d3d3;
+    margin: 10px;
+    padding: 10px;
+}
+
+.shimmer .sub div {
+    height: 125px;
+    background-color: #d3d3d3;
+}
+
+
+.shimmer .sub h3, .shimmer .sub h4 {
+    height: 10px;
+    background-color: #d3d3d3;
+}
+.shimmer .sub h5 {
+    margin: 0;
+    padding-top: 10px;
+}

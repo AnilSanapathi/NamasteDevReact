@@ -1,5 +1,13 @@
+import { Link } from "react-router-dom";
+
 const Title = () => {
-  return <img className="image"  alt="text" src="https://dz8fbjd9gwp2s.cloudfront.net/logos/6389e494e4b0a2e361db7362.png?v=6"/>;
+  return (
+    <img
+      className="image"
+      alt="text"
+      src="https://dz8fbjd9gwp2s.cloudfront.net/logos/6389e494e4b0a2e361db7362.png?v=6"
+    />
+  );
 };
 
 const Header = () => {
@@ -10,19 +18,19 @@ const Header = () => {
         <div className="nav-items">
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/">About</a>
+              <Link to='/about'>About</Link>
             </li>
             <li>
-              <a href="/">Contact Us</a>
+              <Link to='/contact'>Contact Us</Link>
             </li>
             <li>
-              <a href="/">Cart</a>
+              <Link to='/cart'>Cart</Link>
             </li>
             <li>
-              <a href="/">Signup</a>
+              <Link to='/signup'>Signup</Link>
             </li>
           </ul>
         </div>
