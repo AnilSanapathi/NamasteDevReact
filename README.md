@@ -123,3 +123,72 @@ React Components
 	
 	Component Composition: Composing Components
 		Creating new component with other component is called Component Composition. The process of using other components would be passing components as props to other components
+
+
+
+<!-- 4th Session -->
+
+- JSX can only have one parent
+- React.Fragment gives us a beautiful feature to wrap all the elements inside this.
+
+Virtual DOM
+	- Representation of a DOM is known as Virtual DOM
+	- Reconciliation  - it is a process, which uses an diff algorithm, finds the diff between old DOM tree and updated DOM tree
+	- To identify the newly or updated nodes react needs key with unique value
+
+React Fiber
+- It came in React 16
+- New Reconciliation Engine
+
+
+<!-- 5th Session -->
+
+
+
+Named Imports & Exports
+	Named Imports
+- 
+- 
+
+Default Imports & Exports
+- 
+- 
+
+State - Every component in react mains a state. you can put all the variables in state. every time you have create a variable you use state. 
+
+Hook - Hook is nothing but a normal function, these hooks are provided by React.
+- useState - used to create local state variable
+		   - this hook will gives you local state variable inside the functional component, don't use useState 
+	
+- Why do we need state variable?
+	- To make sync UI with state, react will keeps track on state variables
+	- Whenever my state variable value changes component gets re-rendered  
+	- Why react is fast - Faster DOM manipulation
+		- Becz it had diff algo, virtual dom
+
+	
+
+<!-- 6th Session -->
+
+useEffect
+- It takes callback function, which called when useEffect gets called after rendering the page, useEffect is called in the following cases
+		- when state changes
+		- when props changes
+		- when page rendered
+	- If you do not want to call useEffect one each component call, pass dependency as Empty Array
+	- If you want call useEffect on certain conditions then that dependency variables should be in dependency array
+
+
+
+<!-- 7th Session -->
+
+Routing:
+- Using react-router-dom package help us to create routing.
+- Import CreateBrowserRouter function from the package to create route configuration.
+- import RouterProvider takes router configuration and render.
+- import useRouteError hook, it will gives error object if there is any invalid routes redirected by user. 
+- Two types of routing;
+	1. Client Side Routing - By importing Link component from above package to active SSPa
+	2. Server Side Routing - Server side rendering
+- Outlet - all the childrens will go into the Outlet
+- useParams - will gives the route paramters as object 
