@@ -1,16 +1,18 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Header from "./components/Header";
-import Body from "./components/Body";
-import Footer from "./components/Footer";
-import About from "./components/About";
-import NotFound from "./components/NotFound";
-import Contact from "./components/Contact";
-import Cart from "./components/Cart";
-import Signup from "./components/Signup";
-import RestaurantMenu from "./components/RestaurantMenu";
+import Header from "./components/header/Header";
+import Body from "./components/body/Body";
+import Footer from "./components/footer/Footer";
+import About from "./components/header/About";
+import NotFound from "./components/body/NotFound";
+import Contact from "./components/header/Contact";
+import Cart from "./components/header/Cart";
+import Signup from "./components/header/Signup";
+import RestaurantMenu from "./components/body/RestaurantMenu";
+import { ContactClass } from "./components/header/ContactClass";
 
+const Instamart = lazy(() => import("../src/components/header/Instamart"));
 const AppLayout = () => {
   return (
     <>
@@ -36,6 +38,10 @@ const routerConfig = createBrowserRouter([
         element: <About />,
       },
       {
+        path: "/aboutClass",
+        element: <ContactClass />,
+      },
+      {
         path: "/contact",
         element: <Contact />,
       },
@@ -50,6 +56,14 @@ const routerConfig = createBrowserRouter([
       {
         path: "/restaurant/:menuId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/instamart",
+        element: (
+          <Suspense>
+            <Instamart />
+          </Suspense>
+        ),
       },
     ],
   },

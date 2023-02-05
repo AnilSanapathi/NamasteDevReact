@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { list } from "../constants";
+import { RESTAURANTS_URL, list } from "../../constants";
 import Restraurant from "./Restraurant";
 import Shimmer from "./Shimmer";
 import NoData from "./NoData";
+import useOnline from "../../utils/offline";
 
 const Body = () => {
   useEffect(() => {
@@ -24,11 +25,14 @@ const Body = () => {
       setFilterResto(restaurants);
     }
   }
+  const isOnline = useOnline();
+
+  if (!isOnline) {
+    return <h1>Oops! Please check your internet connection.</h1>;
+  }
 
   async function getRestaurants() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.7338911&lng=83.3093517&page_type=DESKTOP_WEB_LISTING"
-    );
+    const data = await fetch(RESTAURANTS_URL);
     const json = await data.json();
 
     setRestro(json.data?.cards[2]?.data?.data?.cards);

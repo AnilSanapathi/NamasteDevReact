@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
-import { imageURL } from "../constants";
+import { imageURL } from "../../constants";
 import NoData from "./NoData";
 
 const RestaurantMenu = () => {
@@ -12,14 +12,12 @@ const RestaurantMenu = () => {
   }, []);
 
   async function getMenuDetails(menuId) {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/v4/full?lat=17.7338911&lng=83.3093517&menuId=" +
-        menuId
-    );
+    const data = await fetch(RESTAURANT_DETAILS + menuId);
     const data1 = await data.json();
-    console.log(data1, "data1data1");
     setMenu(data1.data || []);
   }
+
+
   if (!menu) {
     return <Shimmer />;
   }
