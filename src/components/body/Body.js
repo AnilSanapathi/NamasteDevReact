@@ -47,27 +47,32 @@ const Body = () => {
 
   return (
     <>
-      <div className="search-bar">
+      <div className="flex justify-center space-x-10 p-10 ">
         <input
           type="text"
-          className="search-input"
+          className="h-12 w-4/12 border border-rose-300 rounded-xl text-center"
           placeholder="Search Restraurant"
           name="search-box"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <button
-          className="btn-submit"
-          type="submit"
-          onClick={() => filterRestro("search")}
-        >
-          Search
-        </button>
-        <button className="btn-submit" onClick={() => filterRestro("reset")}>
-          Reset
-        </button>
+        <div className="space-x-4">
+          <button
+            className=" w-20 h-12 rounded-2xl hover:bg-orange-300 border  border-rose-400"
+            type="submit"
+            onClick={() => filterRestro("search")}
+          >
+            Search
+          </button>
+          <button
+            className=" w-20 h-12 rounded-2xl hover:bg-orange-300 border  border-rose-400"
+            onClick={() => filterRestro("reset")}
+          >
+            Reset
+          </button>
+        </div>
       </div>
-      <div className="restaurant-list">
+      <div className="flex flex-wrap justify-evenly">
         {filteredResto.length ? (
           filteredResto.map((item, index) => (
             <Restraurant key={index} {...item.data} />

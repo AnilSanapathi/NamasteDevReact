@@ -1,4 +1,12 @@
-.header {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+/* .header {
     height: 80px;
     justify-content: space-between;
     padding-inline: 120px;
@@ -106,4 +114,4 @@
 .shimmer .sub h5 {
     margin: 0;
     padding-top: 10px;
-}
+} */
